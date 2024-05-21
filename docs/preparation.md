@@ -1,5 +1,4 @@
-# Ottawa Museum Guide
-
+# Guide touristique pour le musée d'Ottawa
 ## Description
 Ce projet est un guide touristique pour le musée d'Ottawa, créé avec Next.js. Il inclut des informations sur les expositions, les horaires, les événements, et plus encore.
 il contiendra 
