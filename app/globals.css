@@ -9,6 +9,7 @@
   --body-color: hsl(var(--hue-color), 60%, 95%);
   --light: #FFF;
   --dark: #000;
+  --darki: #000000c8;
 
   --primary-color: #ff1500;
   --background-color: #f8f9fa;
