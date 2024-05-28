@@ -1,0 +1,115 @@
+.reservation {
+  padding: 2rem;
+  text-align: center;
+  background: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reservation h1 {
+  color: var(--first-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.form {
+  padding: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 2rem; 
+  position: relative;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroupNoAnimation {
+  position: relative;
+}
+
+.inputGroupInput {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  color: var(--dark);
+  background: var(--input-background);
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  transition: border-color 250ms, box-shadow 250ms;
+}
+
+.inputGroupInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+.inputGroupLabel {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background: var(--input-background);
+  padding: 0 5px;
+  transition: transform 200ms, color 200ms, top 200ms;
+  color: var(--input-border);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.inputGroupInput:focus + .inputGroupLabel,
+.inputGroupInput:valid + .inputGroupLabel {
+  top: -10px;
+  transform: translateY(0);
+  color: var(--first-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+
+.inputGroupNoAnimation .inputGroupLabel {
+  top: -10px;
+  transform: translateY(0);
+  color: var(--first-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: none;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 15px;
+  background: var(--first-color-legere);
+  color: var(--light);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submitButton:hover {
+  background: var(--first-color);
+  transform: scale(1.05);
+}
+
+.submitButton:active {
+  transform: scale(0.95);
+}

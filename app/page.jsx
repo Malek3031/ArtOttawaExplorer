@@ -1,11 +1,20 @@
-import Image from 'next/image';
+'use client';
+import { usePathname } from 'next/navigation';
+import Accueil from '../Composents/Accueil';
+import Reservation from '../Composents/Reservation';
+import Contact from '../Composents/Contact';  
+import Connexion from '../Composents/Connexion';  
 import styles from './page.module.css';
-export default function Home() {
-    return (
-        <main className={styles.main}>
-        <div className={styles.welcome}>
-            Soyez la bienvenue sur biblio-app
-        </div>
-        </main>
-    );
+
+export default function Page() {
+  const pathname = usePathname();
+
+  return (
+    <div className={styles.page}>
+      {pathname === '/' && <Accueil />}
+      {pathname === '/reservation' && <Reservation />}
+      {pathname === '/contact' && <Contact />}
+      {pathname === '/connexion' && <Connexion />}
+    </div>
+  );
 }

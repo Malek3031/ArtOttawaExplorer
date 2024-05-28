@@ -1,21 +1,112 @@
 :root {
-  --hue-color: 165;
-  --first-color: hsl(var(--hue-color), 60%, 33%);
+  --hue-color: 0; /* Couleur rouge pour le thème */
+  --first-color: hsl(var(--hue-color), 90%, 50%);
+  --first-color-alt: hsl(var(--hue-color), 60%, 60%);
+  --first-color-lighter: hsl(var(--hue-color), 60%, 70%);
+  --first-color-legere: hsl(var(--hue-color), 90%, 60%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --body-color: hsl(var(--hue-color), 60%, 95%);
+  --light: #FFF;
+  --dark: #000;
+
+  --primary-color: #ff1500;
+  --background-color: #f8f9fa;
+  --input-background: #fff;
+  --input-border: #ced4da;
+  --focus-color: #495057;
+  --button-color: #ff6f61;
+  --button-hover-color: #e55342;
+  --button-text-color: #fff;
+
   --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .98rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .60rem;
+
   --font-bold: 800;
+  --font-medium-bold: 600;
+  --font-semi-bold: 400;
+
+  --slidebar-width: 300px;
+  --page-max-width: 1024px;
+  --navbar-height: 4rem;
+
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: 0.75rem;
   --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  --z-tooltip: 10;
   --z-fixed: 1000;
+  --z-back: 0;
 }
+
 @media screen and (min-width: 968px) {
-:root {
-  --big-font-size: 3rem;
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1.10rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
 }
-}
-body.dark {
-  --first-color: #0C0C1E;
-}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--light);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Ajout des styles globaux pour les boutons */
+.button {
+  padding: 0.75rem 1.5rem;
+  background: var(--first-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background: var(--first-color-alt);
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
