@@ -1,6 +1,6 @@
 'use client';
-import Connexion from '../../Composents/Connexion';
+import Reservation from '../../Composents/Reservation';
 
-export default function ConnexionPage() {
-  return <Connexion />;
+export default function ReservationPage() {
+  return <Reservation />;
 }
