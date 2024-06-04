@@ -1,5 +1,19 @@
-/* components/MenuNav.module.css */
-.nav ul {
+.nav {
+  position: relative;
+}
+
+.menuToggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.menu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,8 +24,8 @@
   padding: 0;
 }
 
-.nav a {
-  color: var(--light); 
+.menu a {
+  color: #fff;
   font-weight: 700;
   position: relative;
   text-transform: uppercase;
@@ -19,27 +33,50 @@
   transition: color 0.3s ease;
 }
 
-.nav a::after {
+.menu a::after {
   content: '';
   position: absolute;
   width: 0;
   height: 2px;
   bottom: -3px;
   left: 0;
-  background-color: var(--light); 
+  background-color: #fff;
   transition: width 0.3s ease;
 }
 
-.nav a:hover::after {
+.menu a:hover::after {
   width: 100%;
 }
 
-.nav a:hover {
-  color: var(--input-border);
+.menu a:hover {
+  color: #ddd;
 }
 
-.nav a.active {
-  color: var(--first-color); /* Couleur du lien actif */
-  font-weight: bold;
-  border-bottom: 2px solid var(--first-color); /* Souligne le lien actif */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: --first-color-legere;
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .menu a {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+  }
 }
