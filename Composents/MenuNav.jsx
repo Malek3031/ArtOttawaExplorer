@@ -8,6 +8,7 @@ export default function MenuNav() {
     <nav className={styles.nav}>
       <ul>
         <li><a href="#" onClick={() => router.push('/')}>Accueil</a></li>
+        <li><a href="#" onClick={() => router.push('/About')}>About</a></li>
         <li><a href="#" onClick={() => router.push('/reservation')}>Réservation</a></li>
         <li><a href="#" onClick={() => router.push('/contact')}>Contact</a></li>
         <li><a href="#" onClick={() => router.push('/connexion')}>Connexion</a></li>
@@ -15,3 +16,4 @@ export default function MenuNav() {
     </nav>
   );
 }
+
