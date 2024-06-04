@@ -1,3 +1,4 @@
+/* components/MenuNav.module.css */
 .nav ul {
   display: flex;
   align-items: center;
@@ -35,4 +36,10 @@
 
 .nav a:hover {
   color: var(--input-border);
+}
+
+.nav a.active {
+  color: var(--first-color); /* Couleur du lien actif */
+  font-weight: bold;
+  border-bottom: 2px solid var(--first-color); /* Souligne le lien actif */
 }
