@@ -1,11 +1,19 @@
 'use client';
+import { useState } from 'react';
 import Head from 'next/head';
 import Header from '../Composents/Header';
 import Footer from '../Composents/Footer';
+import Accueil from '../Composents/Accueil';
+import About from '../Composents/About';
+import Reservation from '../Composents/Reservation';
+import Contact from '../Composents/Contact';
+import Connexion from '../Composents/Connexion';
 import styles from './layout.module.css';
 import './globals.css';
 
 export default function RootLayout({ children }) {
+  const [page, setPage] = useState('accueil');
+
   return (
     <html lang="fr">
       <Head>
@@ -14,8 +22,13 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body className={styles.body}>
-        <Header />
+        <Header setPage={setPage} />
         <main className={styles.main}>
+          {page === 'accueil' && <Accueil />}
+          {page === 'about' && <About />}
+          {page === 'reservation' && <Reservation />}
+          {page === 'contact' && <Contact />}
+          {page === 'connexion' && <Connexion />}
           {children}
         </main>
         <Footer />

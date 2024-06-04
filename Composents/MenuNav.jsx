@@ -1,19 +1,25 @@
 import styles from './MenuNav.module.css';
-import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
-export default function MenuNav() {
-  const router = useRouter();
+export default function MenuNav({ setPage }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <nav className={styles.nav}>
-      <ul>
-        <li><a href="#" onClick={() => router.push('/')}>Accueil</a></li>
-        <li><a href="#" onClick={() => router.push('/About')}>About</a></li>
-        <li><a href="#" onClick={() => router.push('/reservation')}>Réservation</a></li>
-        <li><a href="#" onClick={() => router.push('/contact')}>Contact</a></li>
-        <li><a href="#" onClick={() => router.push('/connexion')}>Connexion</a></li>
+      <div className={styles.menuToggle} onClick={toggleMenu}>
+        ☰
+      </div>
+      <ul className={`${styles.menu} ${isOpen ? styles.menuOpen : ''}`}>
+        <li><a href="#" onClick={() => { setPage('accueil'); setIsOpen(false); }}>Accueil</a></li>
+        <li><a href="#" onClick={() => { setPage('about'); setIsOpen(false); }}>About</a></li>
+        <li><a href="#" onClick={() => { setPage('reservation'); setIsOpen(false); }}>Réservation</a></li>
+        <li><a href="#" onClick={() => { setPage('contact'); setIsOpen(false); }}>Contact</a></li>
+        <li><a href="#" onClick={() => { setPage('connexion'); setIsOpen(false); }}>Connexion</a></li>
       </ul>
     </nav>
   );
 }
-
