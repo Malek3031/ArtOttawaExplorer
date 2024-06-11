@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Head from 'next/head';
 import Header from '../Composents/Header';
 import Footer from '../Composents/Footer';
@@ -12,6 +13,7 @@ import styles from './layout.module.css';
 import './globals.css';
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
   const [page, setPage] = useState('accueil');
 
   return (
@@ -21,9 +23,9 @@ export default function RootLayout({ children }) {
         <meta name="description" content="Découvrez l'art et la culture d'Ottawa, la capitale du Canada. Explorez notre collection d'art unique et réservez des visites guidées pour une expérience inoubliable." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <body className={styles.body}>
+      <body>
         <Header setPage={setPage} />
-        <main className={styles.main}>
+        <main className={pathname === '/connexion' ? styles.connexionBackground : ''}>
           {page === 'accueil' && <Accueil />}
           {page === 'about' && <About />}
           {page === 'reservation' && <Reservation />}
