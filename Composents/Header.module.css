@@ -11,7 +11,7 @@
   align-items: center;
   gap: 1rem;
   color: var(--light);
-  cursor: pointer; /* Ajout du curseur pour indiquer que c'est cliquable */
+  cursor: pointer; 
 }
 
 .Lelogo {
