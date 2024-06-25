@@ -1,0 +1,27 @@
+.header {
+  padding: 1rem;
+  background-color: var(--first-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--light);
+  cursor: pointer; 
+}
+
+.Lelogo {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  font-size: 0.875rem;
+  border-radius: 50%;
+}
