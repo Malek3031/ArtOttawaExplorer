@@ -40,9 +40,8 @@ export default function RootLayout({ children }) {
       </Head>
       <body>
         <Header />
-        <main className={pathname === '/connexion' ? styles.connexionBackground : ''}>
-          {children}
-          {getPageComponent(pathname)}
+        <main>
+          {pathname === '/' ? children : getPageComponent(pathname)}
         </main>
         <Footer />
       </body>
