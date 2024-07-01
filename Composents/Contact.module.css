@@ -1,101 +1,107 @@
 .page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    position: relative;
-  }
-  
-  .banner {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.6); 
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .container {
-    padding: 2rem;
-    background-color: transparent;
-    display: flex;
-    flex-direction: row; 
-    align-items: flex-start;
-    border-radius: 8px;
-    max-width: 800px; 
-    width: 100%;
-    z-index: 1;
-    color: #fff;
-  }
-  
-  .contactDetails {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 2rem;
-  }
-  
-  .contactInfo {
-    margin-bottom: var(--mb-1);
-  }
-  
-  .contactInfo h2 {
-    font-size: var(--h2-font-size);
-    margin-bottom: var(--mb-0-5);
-  }
-  
-  .contactInfo p {
-    font-size: var(--normal-font-size);
-    margin: 0;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .label {
-    font-size: var(--normal-font-size);
-    color: #fff; 
-    margin-bottom: var(--mb-0-5);
-  }
-  
-  .input, .textarea {
-    padding: var(--mb-0-75);
-    margin-bottom: var(--mb-1-5);
-    border: 1px solid var(--input-border);
-    border-radius: 4px;
-    width: 100%;
-    color: #000; 
-    background-color: rgba(255, 255, 255, 0.8); 
-  }
-  
-  .textarea {
-    height: 100px;
-  }
-  
-  .button {
-    padding: var(--mb-0-75);
-    background-color: var(--first-color-legere); 
-    color: var(--button-text-color);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: var(--normal-font-size);
-  }
-  
-  .button:hover {
-    background-color:var(--first-color); 
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6); 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 2rem;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start;
+  border-radius: 8px;
+  max-width: 800px; 
+  width: 100%;
+  z-index: 1;
+  color: #fff;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 2rem;
+}
+
+.contactInfo {
+  margin-bottom: var(--mb-1);
+}
+
+.contactInfo h2 {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.contactInfo p {
+  font-size: var(--normal-font-size);
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label {
+  font-size: var(--normal-font-size);
+  color: #fff; 
+  margin-bottom: var(--mb-0-5);
+}
+
+.input, .textarea {
+  padding: var(--mb-0-75);
+  margin-bottom: var(--mb-1-5);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  width: 100%;
+  color: #000; 
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.textarea {
+  height: 100px;
+}
+
+.button {
+  padding: var(--mb-0-75);
+  background-color: var(--first-color-legere); 
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--normal-font-size);
+}
+
+.button:hover {
+  background-color: var(--first-color); 
+}
+
+/* Styles pour afficher les messages d'erreur */
+.error {
+  color: red;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
