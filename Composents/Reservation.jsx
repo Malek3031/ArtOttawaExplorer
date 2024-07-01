@@ -12,6 +12,7 @@ const Reservation = () => {
           alt="Reservation Banner" 
           layout="fill" 
           objectFit="cover"
+          priority={true}
         />
       </div>
       <div className={styles.overlay}>

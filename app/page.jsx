@@ -12,7 +12,7 @@ export default function Page() {
 
   return (
     <div className={styles.page}>
-      {pathname === '/accueil' && <Accueil />}
+      {pathname === '/' && <Accueil />}
       {pathname === '/about' && <About />}
       {pathname === '/reservation' && <Reservation />}
       {pathname === '/contact' && <Contact />}
