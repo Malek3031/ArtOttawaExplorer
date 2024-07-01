@@ -80,3 +80,9 @@
     color: #fff;
   }
 }
+
+.nav a.active {
+  color: var(--first-color); /* Couleur du lien actif */
+  font-weight: bold;
+  border-bottom: 2px solid var(--first-color); /* Souligne le lien actif */
+}
