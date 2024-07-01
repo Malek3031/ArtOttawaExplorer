@@ -1,3 +1,5 @@
+'use client';
+
 import styles from './Connexion.module.css';
 import Image from 'next/image';
 

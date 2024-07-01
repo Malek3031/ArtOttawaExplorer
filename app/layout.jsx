@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+
 import { usePathname } from 'next/navigation';
 import Head from 'next/head';
 import Header from '../Composents/Header';
@@ -14,7 +14,22 @@ import './globals.css';
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  const [page, setPage] = useState('accueil');
+
+  // Gestion de la page courante
+  const getPageComponent = (path) => {
+    switch (path) {
+      case '/about':
+        return <About />;
+      case '/reservation':
+        return <Reservation />;
+      case '/contact':
+        return <Contact />;
+      case '/connexion':
+        return <Connexion />;
+      default:
+        return <Accueil />;
+    }
+  };
 
   return (
     <html lang="fr">
@@ -24,14 +39,10 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body>
-        <Header setPage={setPage} />
+        <Header />
         <main className={pathname === '/connexion' ? styles.connexionBackground : ''}>
-          {page === 'accueil' && <Accueil />}
-          {page === 'about' && <About />}
-          {page === 'reservation' && <Reservation />}
-          {page === 'contact' && <Contact />}
-          {page === 'connexion' && <Connexion />}
           {children}
+          {getPageComponent(pathname)}
         </main>
         <Footer />
       </body>
