@@ -82,3 +82,8 @@
 .forgotPassword:hover {
   color: var(--button-hover-color);
 }
+.error {
+  color: red;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
