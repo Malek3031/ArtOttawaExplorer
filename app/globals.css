@@ -8,10 +8,10 @@
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --body-color: hsl(var(--hue-color), 60%, 95%);
   --light: #FFF;
+  --lighti: #FFF;
   --dark: #000;
   --darki: #000000c8;
-
-  --primary-color: #ff1500;
+  --back-ground-formulaire : rgba(231, 223, 223, 0.749);
   --background-color: #f8f9fa;
   --input-background: #fff;
   --input-border: #ced4da;
@@ -19,7 +19,6 @@
   --button-color: #ff6f61;
   --button-hover-color: #e55342;
   --button-text-color: #fff;
-
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -27,27 +26,11 @@
   --normal-font-size: .98rem;
   --small-font-size: .813rem;
   --smaller-font-size: .60rem;
-
-  --font-bold: 800;
-  --font-medium-bold: 600;
-  --font-semi-bold: 400;
-
-  --slidebar-width: 300px;
-  --page-max-width: 1024px;
-  --navbar-height: 4rem;
-
-  --mb-0-25: .25rem;
   --mb-0-5: .5rem;
   --mb-0-75: 0.75rem;
   --mb-1: 1rem;
   --mb-1-5: 1.5rem;
   --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
-  --mb-3: 3rem;
-
-  --z-tooltip: 10;
-  --z-fixed: 1000;
-  --z-back: 0;
 }
 
 @media screen and (min-width: 968px) {
@@ -59,7 +42,22 @@
     --normal-font-size: 1.10rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
+    
   }
+}
+
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: #e1e1e1;
+  --input-background: #2c2c2c;
+  --input-border: #444;
+  --button-color: #ff6f61;
+  --button-hover-color: #e55342;
+  --first-color: #290303d0;
+  --focus-color: #ffffff;
+  --back-ground-formulaire : rgba(20, 20, 20, 0.81);
+  --darki : white;
+
 }
 
 * {
@@ -106,7 +104,7 @@ body {
   transform: scale(0.95);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 
 body {
   font-family: 'Poppins', sans-serif;
