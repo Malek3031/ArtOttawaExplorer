@@ -1,27 +1,72 @@
 'use client';
 
-import styles from './About.module.css';
+import styles from './Accueil.module.css';
 import Image from 'next/image';
+import Head from 'next/head';
 
-export default function About() {
+const Accueil = () => {
   return (
-    <div className={styles.about}>
-      <div className={styles.banner}>
-        <Image 
-          src="/About.jpg" 
-          alt="About Banner" 
-          layout="responsive" 
-          width={1200} 
-          height={300} 
-        />
-        <h1 className={styles.siteName}>
-          À propos de ArtOttawa
-        </h1>
+    <>
+      <Head>
+        <title>Accueil - ArtOttawa</title>
+        <meta name="description" content="Découvrez l'art et la culture d'Ottawa, la capitale du Canada. Explorez notre collection d'art unique et réservez des visites guidées pour une expérience inoubliable." />
+        <link rel="canonical" href="http://localhost:3000/" />
+      </Head>
+      <div className={styles.page}>
+        <div className={styles.banner}>
+          <Image 
+            src="/banner.jpg" 
+            alt="Accueil Banner" 
+            layout="fill" 
+            objectFit="cover"
+          />
+        </div>
+        <div className={styles.overlay}>
+          <div className={styles.container}>
+            <h1 className={styles.title}>Bienvenue à ArtOttawa</h1>
+            <p className={styles.description}>
+              Découvrez l'art et la culture d'Ottawa, la capitale du Canada. Explorez notre collection d'art unique et réservez des visites guidées pour une expérience inoubliable.
+            </p>
+          </div>
+        </div>
+        <div className={styles.expositionsSection}>
+          <h2>Nos Expositions</h2>
+          <div className={styles.expositions}>
+            <div className={styles.exposition}>
+              <Image 
+                src="/exposition1.jpg" 
+                alt="Exposition 1" 
+                width={400} 
+                height={300} 
+                className={styles.expositionImage}
+              />
+              <p>Art moderne</p>
+            </div>
+            <div className={styles.exposition}>
+              <Image 
+                src="/exposition2.jpg" 
+                alt="Exposition 2" 
+                width={400} 
+                height={300} 
+                className={styles.expositionImage}
+              />
+              <p>Art historique</p>
+            </div>
+            <div className={styles.exposition}>
+              <Image 
+                src="/exposition3.jpg" 
+                alt="Exposition 3" 
+                width={400} 
+                height={300} 
+                className={styles.expositionImage}
+              />
+              <p>Art contemporain</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className={styles.introduction}>
-        <h2>Notre Histoire</h2>
-        <p>ArtOttawa est dédié à la promotion de l'art et de la culture dans la capitale du Canada. Nous croyons en la puissance de l'art pour inspirer et connecter les gens. Notre mission est de rendre l'art accessible à tous et de soutenir les artistes locaux.</p>
-      </div>
-    </div>
+    </>
   );
 }
+
+export default Accueil;
